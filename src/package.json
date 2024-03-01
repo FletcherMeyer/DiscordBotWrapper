@@ -1,0 +1,16 @@
+{
+  "name": "discordbotwrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for Discord.js bots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fletcher Meyer",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "eslint": "^8.57.0"
+  },
+  "type": "module"
+}
