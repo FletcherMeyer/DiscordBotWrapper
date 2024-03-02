@@ -3,6 +3,15 @@ const { clientId, guildId, token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 
+/*
+	Run:
+		> node .\deploy-commands.js
+	To publish to the guilds listed in ./config.json.
+
+	To publish globally, uncomment the code labeled as such.
+	Code is from the Discord.js documentation.
+*/
+
 const commands = [];
 // Grab all the command folders from the commands directory you created earlier
 const foldersPath = path.join(__dirname, 'commands');
@@ -38,15 +47,17 @@ const rest = new REST().setToken(token);
 			{ body: commands },
 		);
 
+		/* 
+			Global Deploy. Uncomment to publish commands to all servers.
+		*/
+		// await rest.put(
+		// 	Routes.applicationCommands(clientId),
+		// 	{ body: commands },
+		// );
+
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 	} catch (error) {
 		// And of course, make sure you catch and log any errors!
 		console.error(error);
 	}
 })();
-
-/* Global Deploy */
-await rest.put(
-	Routes.applicationCommands(clientId),
-	{ body: commands },
-);
