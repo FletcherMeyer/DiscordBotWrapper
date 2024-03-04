@@ -1,13 +1,17 @@
-const { token } = require('../config.json');
+const { token, settings } = require('../config.json');
 const { coloredConsoleLog } = require("../utilities/color-shell-text");
 
 module.exports = {
     async execute(client) {
+        if (settings.preventLogin){
+            return coloredConsoleLog("colorYellowWarningcolorReset Login Disabled.\n");/* Red color for the shell. */
+        }
+
         try {
-        client.login(token);
-        coloredConsoleLog("colorGreenLogin Success!colorReset");/* Green color for the shell. */
+            client.login(token);
+            coloredConsoleLog("colorGreenLogin Success!colorReset\n");/* Green color for the shell. */
         } catch (e) {
-            coloredConsoleLog("colorRedLogin Failure!colorReset");/* Red color for the shell. */
+            coloredConsoleLog("colorRedLogin Failure!colorReset\n");/* Red color for the shell. */
             console.log(e);
         };
 

@@ -20,3 +20,6 @@ client.once(Events.ClientReady, readyClient => {
 /* Login to Discord */
 const handleLogin = require("./handlers/login-handler");
 handleLogin.execute(client);
+
+const { returnHelpObject } = require("./utilities/help-menu-object");
+returnHelpObject();

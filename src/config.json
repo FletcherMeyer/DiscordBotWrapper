@@ -1,5 +1,13 @@
 {
-    "token": "MTE2MTM4ODAyMDcwMDgxOTQ5Ng.GtZC-z.VLaLtYxj2aER9IcjUfJCXaGw5f7EGcl-I2KX4Y",
+	"token": "MTE2MTM4ODAyMDcwMDgxOTQ5Ng.GH6VBg.d89BYVv5367mghi58MbmWM3S4lYWxS7XJIzfnI",
 	"clientId": "1161388020700819496",
-	"guildId": "1064736272335261768"
+	"guildId": "1064736272335261768",
+
+	"settings": {
+		"preventLogin": false,
+		"logNewServers": true,
+		"logLeftServers": true,
+		"displayInfoOnReady": true,
+		"embedColor": null
+	}
 }

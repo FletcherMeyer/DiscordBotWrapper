@@ -8,6 +8,10 @@ const colors = {
     "colorReset": "\u001b[0m",
 }
 
+/**
+ * @param "String to convert."
+ * Uses colors: red, green, yellow, blue, purple, cyan. 
+ */
 const convertColors = (string) => {
     if (string == null) return; 
 
@@ -19,7 +23,10 @@ const convertColors = (string) => {
 
     return string;
 }
-
+/**
+ * @param "String to print."
+ * Uses colors: red, green, yellow, blue, purple, cyan. 
+ */
 const coloredConsoleLog = (string) => {
     if (string == null) return; 
 
