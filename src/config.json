@@ -1,0 +1,15 @@
+{
+	"token": "your-token-here",
+	"clientId": "your-client-id-here",
+	"guildId": "your-guild-id-here",
+
+	"settings": {
+		"sharding": false,
+		"preventLogin": false,
+		"logJoinServers": true,
+		"logLeftServers": true,
+		"displayInfoOnReady": true,
+		"embedColor": null,
+		"shardCount": "auto"
+	}
+}
